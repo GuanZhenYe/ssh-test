@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- create 每次先删除表在创建表  update 在原表基础上插入或更新 -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--<mapping resource="hibernate/po/student.hbm.xml"/>-->
+        <mapping class="com.jianq.po.User"/>
+    </session-factory>
+</hibernate-configuration>
